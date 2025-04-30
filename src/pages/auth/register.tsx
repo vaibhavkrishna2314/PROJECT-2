@@ -11,6 +11,8 @@ import { PlacesAutocomplete } from '@/components/ui/places-autocomplete';
 import { ErrorMessage } from '@/components/ui/error';
 import { getErrorMessage } from '@/lib/utils';
 
+import bgImage from '@/images/frame-with-dogs-vector-white-background_53876-127700.avif';
+
 const registerSchema = z.object({
   email: z.string().email('Invalid email address'),
   password: z.string().min(6, 'Password must be at least 6 characters'),
@@ -77,8 +79,11 @@ export const RegisterPage = () => {
 
   if (!userType || (userType !== 'restaurant' && userType !== 'ngo')) {
     return (
-      <div className="min-h-screen bg-primary-beige flex items-center justify-center">
-        <div className="text-center">
+      <div
+      className="min-h-screen flex items-center justify-center bg-cover bg-center"
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
+        <div className="bg-white/80 p-8 rounded-xl shadow-lg text-center">
           <h2 className="text-2xl font-bold text-neutral-charcoal mb-4">Get Started with FeedConnect – Connect, Share, Grow!</h2>
           <p className="text-neutral-charcoal/80">Please select a valid user type to register.</p>
           <div className="mt-8 space-x-4">
@@ -88,6 +93,11 @@ export const RegisterPage = () => {
             <Button onClick={() => navigate('/register?type=ngo')} variant="secondary">
               Register as NGO
             </Button>
+            <Button onClick={() => navigate('/delivery-login')} 
+                    variant="secondary"
+                    className="bg-yellow-300 hover:bg-yellow-300 text-white">
+              Register as Delivery Partner
+            </Button>
           </div>
         </div>
       </div>
@@ -95,8 +105,13 @@ export const RegisterPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-primary-beige py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-2xl mx-auto space-y-8 bg-white p-8 rounded-lg shadow-md">
+    <div
+  className="min-h-screen bg-cover bg-center py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center"
+  style={{ backgroundImage: `url(${bgImage})` }}
+>
+
+<div className="max-w-2xl w-full space-y-8 bg-white/80 backdrop-blur-md p-8 rounded-lg shadow-md">
+
         <div>
           <h2 className="text-center text-3xl font-bold text-neutral-charcoal">
             Create your account

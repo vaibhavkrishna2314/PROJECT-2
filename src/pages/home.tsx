@@ -12,7 +12,7 @@ export const HomePage = () => {
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-neutral-charcoal sm:text-6xl">
               Reduce Food Waste,{' '}
-              <span className="text-primary-green">Save Animal Lives</span>
+              <span className="text-green-600">Save Animal Lives</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-neutral-charcoal/80">
               Connect restaurants with animal welfare NGOs to reduce food waste and help feed animals in need.
@@ -43,7 +43,7 @@ export const HomePage = () => {
 
           <div className="mt-20 grid grid-cols-1 gap-12 sm:grid-cols-3">
             <div className="text-center">
-              <div className="mx-auto h-12 w-12 text-primary-green">
+              <div className="mx-auto h-12 w-12 text-green-600">
                 <Utensils size={48} />
               </div>
               <h3 className="mt-6 text-lg font-semibold text-neutral-charcoal">
@@ -55,7 +55,7 @@ export const HomePage = () => {
             </div>
 
             <div className="text-center">
-              <div className="mx-auto h-12 w-12 text-primary-green">
+              <div className="mx-auto h-12 w-12 text-green-600">
                 <Building2 size={48} />
               </div>
               <h3 className="mt-6 text-lg font-semibold text-neutral-charcoal">
@@ -67,7 +67,7 @@ export const HomePage = () => {
             </div>
 
             <div className="text-center">
-              <div className="mx-auto h-12 w-12 text-primary-green">
+              <div className="mx-auto h-12 w-12 text-green-600">
                 <Stethoscope size={48} />
               </div>
               <h3 className="mt-6 text-lg font-semibold text-neutral-charcoal">
