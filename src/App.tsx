@@ -15,6 +15,9 @@ import DeliveryLogin from './pages/DeliveryLogin';
 import DeliveryDashboard from './pages/DeliveryDashboard';
 import DeliveryTracking from './pages/DeliveryTracking';
 import DeliveryCompletion from './pages/DeliveryCompletion';
+import About from './pages/About';
+import Blog from './pages/Blog';
+import Contact from './pages/Contact';
 
 // Protected route component that checks user role
 const ProtectedRoute = ({ children, allowedRole }: { children: React.ReactNode, allowedRole?: 'restaurant' | 'ngo' }) => {
@@ -64,6 +67,9 @@ function App() {
               <Route path="/delivery-dashboard" element={<DeliveryDashboard />} />
               <Route path="/delivery-tracking/:orderId" element={<DeliveryTracking />} />
               <Route path="/delivery-completion" element={<DeliveryCompletion />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/contact" element={<Contact />} />
               <Route 
                 path="/dashboard/restaurant" 
                 element={
