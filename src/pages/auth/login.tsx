@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Eye, EyeOff } from 'lucide-react';
 import { ErrorMessage } from '@/components/ui/error';
 import { getErrorMessage } from '@/lib/utils';
+import bgImage from '@/images/frame-with-dogs-vector-white-background_53876-127700.avif';
 
 const loginSchema = z.object({
   email: z.string().email('Invalid email address'),
@@ -36,7 +37,10 @@ export const LoginPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-primary-beige flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div
+  className="min-h-screen bg-cover bg-center flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8"
+  style={{ backgroundImage: `url(${bgImage})` }}
+>
       <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-lg shadow-md">
         <div>
           <h2 className="mt-6 text-center text-3xl font-bold text-neutral-charcoal">
@@ -86,7 +90,7 @@ export const LoginPage = () => {
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-2 top-[13px] text-neutral-charcoal/60 hover:text-neutral-charcoal focus:outline-none"
+                  className="absolute right-2 top-[13px] text-neutral-charcoal/60 hover:text-neutral-charcoal focus:outline-none "
                   aria-label={showPassword ? "Hide password" : "Show password"}
                 >
                   {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}

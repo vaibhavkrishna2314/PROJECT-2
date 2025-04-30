@@ -11,6 +11,10 @@ import { Settings } from '@/pages/dashboard/settings';
 import { DonationHistory } from '@/pages/dashboard/history';
 import { AuthProvider } from '@/components/auth/auth-provider';
 import { useAuth } from '@/lib/auth';
+import DeliveryLogin from './pages/DeliveryLogin';
+import DeliveryDashboard from './pages/DeliveryDashboard';
+import DeliveryTracking from './pages/DeliveryTracking';
+import DeliveryCompletion from './pages/DeliveryCompletion';
 
 // Protected route component that checks user role
 const ProtectedRoute = ({ children, allowedRole }: { children: React.ReactNode, allowedRole?: 'restaurant' | 'ngo' }) => {
@@ -56,6 +60,10 @@ function App() {
               <Route path="/login" element={<LoginPage />} />
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/dashboard" element={<DashboardRouter />} />
+              <Route path="/delivery-login" element={<DeliveryLogin />} />
+              <Route path="/delivery-dashboard" element={<DeliveryDashboard />} />
+              <Route path="/delivery-tracking/:orderId" element={<DeliveryTracking />} />
+              <Route path="/delivery-completion" element={<DeliveryCompletion />} />
               <Route 
                 path="/dashboard/restaurant" 
                 element={
