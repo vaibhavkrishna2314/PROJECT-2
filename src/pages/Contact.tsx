@@ -151,7 +151,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Email</h3>
-                    <p className="text-gray-600">contact@pawshare.org</p>
+                    <p className="text-gray-600">contact@feedconnect.org</p>
                     <p className="text-gray-500 text-sm">We reply within 24 hours</p>
                   </div>
                 </motion.div>
@@ -165,7 +165,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Phone</h3>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                    <p className="text-gray-600">+91 9152618762</p>
                     <p className="text-gray-500 text-sm">Mon-Fri from 9am to 6pm</p>
                   </div>
                 </motion.div>
@@ -180,8 +180,8 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-lg">Location</h3>
                     <p className="text-gray-600">
-                      123 PawShare Street<br />
-                      City, State 12345
+                      Kandoli Campus via Prem Nagar<br />
+                      Dehradun, Uttarakhand, INDIA (248007)
                     </p>
                   </div>
                 </motion.div>
@@ -196,7 +196,7 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold text-lg mb-4">Operating Hours</h3>
                   <div className="space-y-2">
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center gap-12">
                       <span className="text-gray-600">Monday - Friday</span>
                       <span className="text-gray-800 font-medium">9:00 AM - 6:00 PM</span>
                     </div>
@@ -220,7 +220,7 @@ const Contact = () => {
               </p>
               <div className="flex items-center space-x-2">
                 <Phone className="h-5 w-5" />
-                <span className="font-semibold">+1 (555) 999-8888</span>
+                <span className="font-semibold">+91 9152618762</span>
               </div>
               <p className="text-sm mt-2 text-green-100">Available 24/7</p>
             </div>

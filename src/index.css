@@ -1,3 +1,126 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Define CSS variables */
+@layer base {
+  :root {
+    --color-primary: 48 116 246;
+    --color-secondary: 42 157 143;
+    --color-accent: 114 9 183;
+    --color-success: 20 184 166;
+    --color-warning: 245 158 11;
+    --color-error: 239 68 68;
+  }
+
+  body {
+    @apply font-sans text-gray-800 bg-gray-50;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium leading-tight text-gray-900;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-opacity-50;
+  }
+
+  .btn-primary {
+    @apply btn text-white;
+    background-color: rgb(var(--color-primary));
+  }
+  .btn-primary:hover {
+    background-color: rgb(var(--color-primary) / 0.9);
+  }
+  .btn-primary:focus {
+    --tw-ring-color: rgb(var(--color-primary) / 0.5);
+  }
+
+  .btn-secondary {
+    @apply btn text-white;
+    background-color: rgb(var(--color-secondary));
+  }
+  .btn-secondary:hover {
+    background-color: rgb(var(--color-secondary) / 0.9);
+  }
+  .btn-secondary:focus {
+    --tw-ring-color: rgb(var(--color-secondary) / 0.5);
+  }
+
+  .btn-accent {
+    @apply btn text-white;
+    background-color: rgb(var(--color-accent));
+  }
+  .btn-accent:hover {
+    background-color: rgb(var(--color-accent) / 0.9);
+  }
+  .btn-accent:focus {
+    --tw-ring-color: rgb(var(--color-accent) / 0.5);
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-md p-6 transition-all duration-300;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none transition-all duration-200;
+    --tw-ring-color: rgb(var(--color-primary) / 0.2);
+    border-color: rgb(var(--color-primary));
+  }
+
+  .symptom-tag {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2 cursor-pointer transition-all duration-200;
+    background-color: rgb(var(--color-primary) / 0.1);
+    color: rgb(var(--color-primary));
+  }
+
+  .symptom-tag:hover {
+    background-color: rgb(var(--color-primary) / 0.2);
+  }
+
+  .symptom-tag-selected {
+    background-color: rgb(var(--color-primary));
+    color: white;
+  }
+
+  .symptom-tag-selected:hover {
+    background-color: rgb(var(--color-primary) / 0.9);
+  }
+}
+
+/* Animations */
+.fadeIn {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.slideIn {
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

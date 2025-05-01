@@ -76,9 +76,9 @@ export const RestaurantDashboard = () => {
           </div>
           <div className="mt-4 flex md:mt-0 md:ml-4">
             <Button asChild>
-              <Link to="/dashboard/food/new">
-                <PlusCircle className="w-4 h-4 mr-2" />
-                New Food Listing
+              <Link to="/dashboard/food/new" className="flex items-center space-x-2">
+                <PlusCircle className="w-5 h-5" />
+                <span>New Food Listing</span>
               </Link>
             </Button>
           </div>
@@ -201,7 +201,7 @@ export const RestaurantDashboard = () => {
                 Update your restaurant's information, contact details, and preferences.
               </p>
               <Button variant="outline" asChild>
-                <Link to="/dashboard/settings">
+                <Link to="/dashboard/settings" className="inline-flex items-center">
                   <Settings className="w-4 h-4 mr-2" />
                   Manage Settings
                 </Link>
@@ -217,7 +217,7 @@ export const RestaurantDashboard = () => {
                 View your past donations and their impact on the community.
               </p>
               <Button variant="outline" asChild>
-                <Link to="/dashboard/history">
+                <Link to="/dashboard/history" className="inline-flex items-center">
                   <History className="w-4 h-4 mr-2" />
                   View History
                 </Link>

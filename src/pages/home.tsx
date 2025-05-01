@@ -24,7 +24,14 @@ export const HomePage = () => {
               <Button asChild size="lg" variant="secondary">
                 <Link to="/register?type=ngo">I'm an NGO</Link>
               </Button>
-            </div>
+            </div><br />
+            <Button
+              asChild
+              size="lg"
+              className="bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold hover:from-green-500 hover:to-blue-600 transition-all duration-300"
+            >
+              <Link to="/predictor-home">Check My Animal</Link>
+            </Button>
           </div>
         </div>
       </section>
