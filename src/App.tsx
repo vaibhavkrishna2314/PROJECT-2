@@ -11,6 +11,7 @@ import { Settings } from '@/pages/dashboard/settings';
 import { DonationHistory } from '@/pages/dashboard/history';
 import { AuthProvider } from '@/components/auth/auth-provider';
 import { useAuth } from '@/lib/auth';
+import { PredictionProvider } from '@/contexts/PredictionContext';
 import DeliveryLogin from './pages/DeliveryLogin';
 import DeliveryDashboard from './pages/DeliveryDashboard';
 import DeliveryTracking from './pages/DeliveryTracking';
@@ -18,6 +19,12 @@ import DeliveryCompletion from './pages/DeliveryCompletion';
 import About from './pages/About';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
+
+//Disease Prediction Imports
+import HomePage1 from './pages/DiseasePages/HomePage1';
+import PredictorPage from './pages/DiseasePages/PredictorPage';
+import ResultsPage from './pages/DiseasePages/ResultsPage';
+import HistoryPage from './pages/DiseasePages/HistoryPage';
 
 // Protected route component that checks user role
 const ProtectedRoute = ({ children, allowedRole }: { children: React.ReactNode, allowedRole?: 'restaurant' | 'ngo' }) => {
@@ -70,6 +77,42 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/contact" element={<Contact />} />
+
+              <Route
+                path="/predictor-home"
+                element={
+                  <PredictionProvider>
+                    <HomePage1 />
+                  </PredictionProvider>
+                }
+              />
+              <Route
+                path="/predictor"
+                element={
+                  <PredictionProvider>
+                    <PredictorPage />
+                  </PredictionProvider>
+                }
+              />
+              <Route
+                path="/results"
+                element={
+                  <PredictionProvider>
+                    <ResultsPage />
+                  </PredictionProvider>
+                }
+              />
+              <Route
+                path="/history"
+                element={
+                  <PredictionProvider>
+                    <HistoryPage />
+                  </PredictionProvider>
+                }
+              />
+
+
+              {/* Protected Routes */}
               <Route 
                 path="/dashboard/restaurant" 
                 element={
