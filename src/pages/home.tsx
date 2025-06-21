@@ -11,7 +11,7 @@ export const HomePage = () => {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-neutral-charcoal sm:text-6xl">
-              Reduce Food Waste,{' '}
+              Reduce Food Wastee,{' '}
               <span className="text-green-600">Save Animal Lives</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-neutral-charcoal/80">
